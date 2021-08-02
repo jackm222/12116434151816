@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .navbar {
+    @apply flex flex-none flex-row h-10 w-full items-center p-0.5
+  }
+  .logo {
+    @apply w-8 h-8 p-1
+  }
+  .primary-button {
+    @apply bg-lapd-blue p-1 px-2 rounded-lg border-2 text-white ease-out transition-colors duration-300;
+  }
+  .primary-button:hover {
+    @apply bg-transparent border-lapd-blue text-black;
+  }
+  .menu-item {
+    @apply leading-normal relative
+  }
+  .menu-item::before{
+    content: "";
+    transition: width .3s ease-out;
+    @apply absolute bottom-0 left-0 w-0 border-b-2 border-lapd-blue;
+    
+  }
+  .menu-item:hover::before{
+    @apply w-3
+  }
+  nav > * > a {
+    @apply flex justify-center box-border items-center max-h-10
+  }
+  .hero {
+    @apply w-full h-96 flex flex-col content-center justify-center bg-cover bg-no-repeat relative
+  }
+  .overlay {
+    @apply w-full h-full bg-gray-700 bg-opacity-30 absolute top-0 left-0
+  }
+  .header {
+    @apply text-2xl font-medium leading-normal relative mb-2
+  }
+  .header::before {
+    content: "";
+    @apply absolute bottom-0 left-0 w-4 h-1 bg-lapd-blue rounded-sm
+  }
+
+}
